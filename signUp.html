@@ -9,80 +9,78 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <header>
+        <header id="wrapIt">
             <nav id="nav_bar">
                 <img src="images/logo.png">
                 <a href="index.html">Home</a>
                 <a href="myStats.html">My Stats</a>
-                <a href="league.html">League</a>
                 <a href="roundInput.html">Round Input</a>
-                <a href="courseFinder.html">Course Finder</a>
                 <a href="signUp.html">Sign Up</a>
             </nav>
         </header>
         
         <div id="homepageImage">
         <main id="mainStyle" class="formContainer">
-            <form>
+            <form method="post" id="myForm" action="/action_page.php">
                 <div class="tooltip">First Name:
-                    <span class="tooltiptext">Test the Tooltip</span>
-                </div> <input type="text" id="nameVar" placeholder="Enter First and Last Name"></br>
+                    <span class="tooltiptext">Enter first name here</span>
+                </div> <input type="text" id="firstNameVar" placeholder="Enter First Name"></br>
 
                 <div class="tooltip">Last Name:
-                    <span class="tooltiptext">Test the Tooltip</span>
-                </div> <input type="text" id="nameVar" placeholder="Enter First and Last Name"></br>
+                    <span class="tooltiptext">Enter last name here</span>
+                </div> <input type="text" id="lastNameVar" placeholder="Enter Last Name"></br>
 
                 <div class="tooltip" id="padBot">State:
-                    <span class="tooltiptext">Test the Tooltip</span>
+                    <span class="tooltiptext">Enter state of residence OR most golf played</span>
                 </div> <select name="State" id="stateFill" placeholder="State"><option value="" disabled selected>Enter State of Residence</option></select></br>
                 
                 <div class="tooltip">Email:
-                    <span class="tooltiptext">Test the Tooltip</span>
+                    <span class="tooltiptext">Enter email address here</span>
                 </div> <input type="text" id="emailVar" placeholder="Enter Email"></br>
                 
                 <div class="tooltip">Phone:
-                    <span class="tooltiptext">Test the Tooltip</span>
+                    <span class="tooltiptext">Enter phone number here</span>
                 </div> <input type="text" id="phoneVar" placeholder="Enter Phone Number"></br>
 
                 <div class="tooltip">Handicap:
-                    <span class="tooltiptext">Test the Tooltip</span>
-                </div> <input type="text" id="phoneVar" placeholder="Enter Phone Number"></br>
+                    <span class="tooltiptext">Enter handicap if known here - This value is only a starter value and will be replaced once the minimum number of rounds has been attained</span>
+                </div> <input type="text" id="handicapVar" placeholder="Enter Handicap"></br>
                      
                 Password: <input type="password" id="pwVar" placeholder="Enter Password"></br>
-                Which service are you interested in?: <input type="radio" name="Relaxing"> Relaxing <input type="radio" name="Email">Email <input type="radio" name="Phone"> Phone </br>   
-                <input type="checkbox" name="terms"> I agree to the terms </br>
+                Profile Picture: <input type="file" id="picVar" name="picVar" placeholder="Upload Photo" accept=".jpg"></br>
+                How long have you been golfing? </br> <input type="radio" name="radioInput" value="1"> Less than 1 Year </br> <input type="radio" name="radioInput" value="2"> 1-10 Years </br> <input type="radio" name="radioInput" value="3"> More than 10 years </br>   
+               
+                <input type="checkbox" name="terms"> I agree to the terms 
                 <button class="button" id="submit">Register Now</button>
             </form>
         </main>
         </div>
        
         <footer>
-            <div class="container" id="flex">
-                <div class="column">
-                    <a href="index.html">Home</a>
-                    <a href="myStats.html">My Stats</a>
-                    <a href="league.html">League</a>
-                    <a href="roundInput.html">Round Input</a>
-                    <a href="courseFinder.html">Course Finder</a>
-                    <a href="signUp.html">Sign Up</a>
-                    <div id="social">
-                        <img src="images/facebook.png">
-                        <img src="images/twitter.png">
-                        <img src="images/snapchat.png">
-                        <img src="images/insta.png">
+                <div class="container" id="flex">
+                    <div class="column2">
+                        <a href="index.html">Home</a>
+                        <a href="myStats.html">My Stats</a>
+                        <a href="roundInput.html">Round Input</a>
+                        <a href="signUp.html">Sign Up</a>
+                        <div id="social">
+                            <img src="images/facebook.png">
+                            <img src="images/twitter.png">
+                            <img src="images/snapchat.png">
+                            <img src="images/insta.png">
+                        </div>
+                        <a href="#">Site by Benjamin Dubuc</a>
+                        <a href="#">Copyright &copy; 2019 </a>
+                        <div id="white">
+                            <a href="#">Terms & Conditions</a> |
+                            <a href="#">Legal</a> |
+                            <a href="#">Privacy</a>
+                        </div>
                     </div>
-                    <a href="#">Site by Benjamin Dubuc</a>
-                    <a href="#">Copyright &copy; 2019 </a>
-                    <div id="white">
-                        <a href="#">Terms & Conditions</a> |
-                        <a href="#">Legal</a> |
-                        <a href="#">Privacy</a>
-                    </div>
+    
+                    
                 </div>
-
-                
-            </div>
-        </footer>
+            </footer>
 
         <!-- SCRIPT TAGS GO HERE-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

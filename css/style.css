@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+#wrapIt {
+    z-index: 9999;
+}
+
 header img {
     height: 80px;
     margin-left: 30px;
@@ -23,6 +27,11 @@ header img {
     margin: auto;
     padding-top: 0;  
 }
+.grid-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
 
 body {
     height: 1720px;
@@ -36,11 +45,10 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 25px 0 #000000;
-   
+    box-shadow: 0 0 25px 0 #000000;  
 }
 header nav {
     display: flex;
@@ -54,20 +62,13 @@ header a {
     text-decoration: none;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
 #homepageImage {
-    background-image: url(../images/homepage.jpg)
+    background-image: url(../images/homepage.jpg);
 }
 
 main {
-    width: 100%;
+    width: 1200px;
     display: flex;
-    align-items: flex-start;
 }
 
 main div#imageHeight {
@@ -97,8 +98,12 @@ aside {
 aside a {
     height: 300px;
     width: 400px;
-    background-color: blue; 
-    border: 1px solid yellow;
+    background-color: white; 
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
 }
 
 aside div {
@@ -106,10 +111,19 @@ aside div {
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
+  height: 200px;
+  flex-basis: 25%;
+  -ms-flex: auto;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.column2 {    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
 }
 
 .break {
@@ -117,10 +131,6 @@ aside div {
     height: 0;
 }
 
-#wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 footer {
     height: 500px;
@@ -151,6 +161,8 @@ footer div img {
 
 #flex {
     display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 #white {
@@ -174,6 +186,18 @@ input[type=password] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.statsTD {
+    border: 1px solid black;
+    text-align: center;
 }
 
 .tooltip {
@@ -207,11 +231,16 @@ input[type=password] {
 
 #mainStyle {
     background-color: white;
-    height: 1000px;
+    border: 1px solid grey;
+    justify-content: center;
 }
 
 #padBot {
     padding-bottom: 5px;
+}
+
+#padTop {
+    padding-top: 5px;
 }
 
 select {
@@ -222,3 +251,159 @@ select {
     color: grey;
 }
 
+#myStatsMain {
+    border: 1px solid grey;
+    height: 600px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#playerProfile {
+    height: 300px;
+    width: 600px;
+    border: solid 1px grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#inline {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 300px;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+#handicap {
+    border: solid 1px black;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+#roundInputMain {
+    border: 1px solid grey;
+    height: 600px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+#myStatsTable {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button {
+    border-radius: 5px;
+    font-weight: 800;
+    padding: 12px 0;
+    width: 280px;
+    font-size: 28px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.bigButton {
+    border-radius: 5px;
+    font-weight: 800;
+    padding: 12px 0;
+    width: 280px;
+    font-size: 28px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+
+/* Media Queries */ 
+@media only screen and (max-width: 1050px){
+    .column {
+        flex-basis: 50%;
+        height: 150px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .column {
+        flex-basis: 100%;
+        height: 100px;
+    }
+    .container {
+      width: 100%;
+      margin: auto;
+    }
+    .formContainer {
+        width: 100%;
+        margin: auto;
+      }
+    
+    header .container {
+      justify-content: space-around;
+      align-items: center;
+    }
+    header a {
+        margin: 10px;
+    }
+    main div#imageHeight {
+        width: inherit;
+        background-image: none;
+        height: 400px;
+        display: flex;
+        padding-right: 0px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    header {
+        height: 80px;
+        position: fixed;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 25px 0 #000000;  
+    }
+    header nav {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    
+    header a {
+        margin: 20px;
+        color: #000000;
+        text-decoration: none;
+    }
+    
+    main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* align-items: flex-start; */
+    }
+
+}

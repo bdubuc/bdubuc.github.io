@@ -9,48 +9,118 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <header>
+        <header id="wrapIt">
             <nav id="nav_bar">
                 <img src="images/logo.png">
                 <a href="index.html">Home</a>
                 <a href="myStats.html">My Stats</a>
-                <a href="league.html">League</a>
                 <a href="roundInput.html">Round Input</a>
-                <a href="courseFinder.html">Course Finder</a>
                 <a href="signUp.html">Sign Up</a>
             </nav>
         </header>
-        <footer>
-            <div class="container" id="flex">
-                <div class="column">
-                    <a href="index.html">Home</a>
-                    <a href="myStats.html">My Stats</a>
-                    <a href="league.html">League</a>
-                    <a href="roundInput.html">Round Input</a>
-                    <a href="courseFinder.html">Course Finder</a>
-                    <a href="signUp.html">Sign Up</a>
-                    <div id="social">
-                        <img src="images/facebook.png">
-                        <img src="images/twitter.png">
-                        <img src="images/snapchat.png">
-                        <img src="images/insta.png">
-                    </div>
-                    <a href="#">Site by Benjamin Dubuc</a>
-                    <a href="#">Copyright &copy; 2019 </a>
-                    <div id="white">
-                        <a href="#">Terms & Conditions</a> |
-                        <a href="#">Legal</a> |
-                        <a href="#">Privacy</a>
-                    </div>
-                </div>
 
+        <div id="homepageImage">
+        <main class="container" id="myStatsMain">
+
+            <div id="playerProfile">                
+                <div id="inline">
+                        <div id="firstName" class="break">First Name: </div>
+                        <div id="lastName" class="break">Last Name: </div>
+                        <div id="stateID" class="break">State: </div>
+                        <div id="email" class="break">Email: </div>
+                        <div id="phone" class="break">Phone: </div>
+                        <div id="golferLevel" class="break">Experience: </div>
+                </div>
                 
+                <div>Player Profile</div>
+                <div id="handicap"></div>
+                <!-- <canvas id="myCanvas"></canvas> -->
             </div>
-        </footer>
+            
+            <table style="width:100%" id="myStatsTable">
+                    <tr>
+                        <th>Hole 1</th>
+                        <th>Hole 2</th>
+                        <th>Hole 3</th>
+                        <th>Hole 4</th>
+                        <th>Hole 5</th>
+                        <th>Hole 6</th>
+                        <th>Hole 7</th>
+                        <th>Hole 8</th>
+                        <th>Hole 9</th>
+                        <th>Front 9</th>
+                    </tr>
+                    <tr>
+                        <td class="statsTD" id="hole1"></td>
+                        <td class="statsTD" id="hole2"></td>
+                        <td class="statsTD" id="hole3"></td>
+                        <td class="statsTD" id="hole4"></td>
+                        <td class="statsTD" id="hole5"></td>
+                        <td class="statsTD" id="hole6"></td>
+                        <td class="statsTD" id="hole7"></td>
+                        <td class="statsTD" id="hole8"></td>
+                        <td class="statsTD" id="hole9"></td>
+                        <td class="statsTD" id="front9"></td>
+                    </tr>
+                    <tr>    
+                        <th>Hole 10</th>
+                        <th>Hole 11</th>
+                        <th>Hole 12</th>
+                        <th>Hole 13</th>
+                        <th>Hole 14</th>
+                        <th>Hole 15</th>
+                        <th>Hole 16</th>
+                        <th>Hole 17</th>
+                        <th>Hole 18</th>
+                        <th>Back 9</th>
+                    </tr>
+                    <tr>
+                        <td class="statsTD" id="hole10"></td>
+                        <td class="statsTD" id="hole11"></td>
+                        <td class="statsTD" id="hole12"></td>
+                        <td class="statsTD" id="hole13"></td>
+                        <td class="statsTD" id="hole14"></td>
+                        <td class="statsTD" id="hole15"></td>
+                        <td class="statsTD" id="hole16"></td>
+                        <td class="statsTD" id="hole17"></td>
+                        <td class="statsTD" id="hole18"></td>
+                        <td class="statsTD" id="back9"></td>
+                    </tr>
+                </table>
+                <button class="button" id="loadData">Load Data</button>
+        </main>
+        </div>
+
+
+        <footer>
+                <div class="container" id="flex">
+                    <div class="column2">
+                        <a href="index.html">Home</a>
+                        <a href="myStats.html">My Stats</a>
+                        <a href="roundInput.html">Round Input</a>
+                        <a href="signUp.html">Sign Up</a>
+                        <div id="social">
+                            <img src="images/facebook.png">
+                            <img src="images/twitter.png">
+                            <img src="images/snapchat.png">
+                            <img src="images/insta.png">
+                        </div>
+                        <a href="#">Site by Benjamin Dubuc</a>
+                        <a href="#">Copyright &copy; 2019 </a>
+                        <div id="white">
+                            <a href="#">Terms & Conditions</a> |
+                            <a href="#">Legal</a> |
+                            <a href="#">Privacy</a>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+            </footer>
 
         <!-- SCRIPT TAGS GO HERE-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src='js/myScript.js'></script>
+		<script src='js/myStats.js'></script>
         <script src="" async defer></script>
     </body>
 </html>
